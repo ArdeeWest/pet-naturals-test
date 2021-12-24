@@ -1,0 +1,238 @@
+.hero {
+  padding-top: 7px;
+  padding-bottom: 100px;
+
+  &__container {
+    width: 100%;
+    margin: 0 auto;
+
+    @media screen and (min-width: 320px) {
+      padding: 0 10px;
+    }
+
+    @media screen and (min-width: 768px) {
+      max-width: 768px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 1024px;
+      padding: 0;
+    }
+
+    @media screen and (min-width: 1142px) {
+      max-width: 1142px;
+    }
+  }
+
+  &__title {
+    color: $accent-text-color;
+    text-align: center;
+    @include font-style($fs: 27px, $fw: 700, $lh: 1.17);
+    max-width: 578px;
+    margin: 0 auto 42px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 52px;
+    }
+
+    @media screen and (min-width: 1142px) {
+      margin: 0 auto 5px;
+    }
+  }
+
+  &__content {
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media screen and (min-width: 1142px) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+  }
+
+  &__post {
+    @media screen and (min-width: 1024px) {
+      padding: 0 20%;
+    }
+
+    @media screen and (min-width: 1142px) {
+      padding: 0;
+    }
+  }
+
+  &__post-text {
+    color: $secondary-text-color;
+    @include font-style($fs: 26px, $fw: 700, $lh: 1.31);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 1142px) {
+      width: 401px;
+    }
+  }
+
+  &__post-list {
+    background-color: #7fb3e1;
+    border-radius: 20px;
+    padding: 35px 10px 15px 35px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 1142px) {
+      max-width: 323px;
+      margin-bottom: 1px;
+    }
+  }
+
+  &__post-item {
+    color: $main-list-text-color;
+    @include font-style($fs: 22px, $fw: 700, $lh: 1.18);
+    margin-bottom: 20px;
+    padding-left: 35px;
+    background-image: url(../images/footprint-b.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  &__img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 21px;
+
+    @media screen and (min-width: 768px) {
+      padding: 0 60px;
+    }
+
+    @media screen and (min-width: 1140px) {
+      padding: 0;
+    }
+  }
+
+  &__img--left {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+      position: absolute;
+      transform: translate(-196px, 27px);
+    }
+  }
+
+  &__img--right {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+      position: absolute;
+      transform: translate(194px, 27px);
+    }
+  }
+
+  .order {
+    background-color: #fdfcfc;
+
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @media screen and (min-width: 1024px) {
+      max-width: 400px;
+    }
+
+    @media screen and (min-width: 1142px) {
+      max-width: 270px;
+      margin-left: auto;
+    }
+
+    &__header {
+      background-color: #7eb2e1;
+
+      background-image: url(../images/blue_arrow.png);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 100% 60px;
+      padding: 23px 24px 45px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      text-align: center;
+      margin-bottom: 7px;
+    }
+
+    &__action-text {
+      color: #483c08;
+      @include font-style($fs: 33px, $fw: 700, $lh: 1.18);
+      margin-bottom: 8px;
+    }
+
+    &__timer {
+      color: $accent-text-color;
+      @include font-style($fs: 36px, $fw: 700);
+      margin-bottom: 3px;
+    }
+
+    &__price-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    &__price--disabled {
+      position: relative;
+      color: #6b6b6b;
+      @include font-style($fs: 30px, $fw: 700);
+    }
+
+    &__price--disabled::before {
+      position: absolute;
+      content: '';
+      border-bottom: 2px solid #f6be91;
+      @include size(100%, 50%);
+
+      transform: rotate(343deg);
+    }
+
+    &__price--active {
+      color: $primary-text-color;
+      @include font-style($fs: 36px, $fw: 700);
+    }
+
+    &__body {
+      padding: 0 24px 20px;
+    }
+
+    &__input {
+      color: #777777;
+      @include size(100%, 50px);
+      background-color: #f3efef;
+      border-radius: 30px;
+      border: transparent;
+      padding-left: 55px;
+      background-image: url(../images/footprint-grey.svg);
+      background-position: 17px 13px;
+      background-repeat: no-repeat;
+      @include font-style($fs: 16px, $fw: 700, $lh: 1.187);
+      margin-bottom: 15px;
+    }
+
+    &__btn {
+      color: #ffffff;
+      background-color: #a1d337;
+      border-radius: 30px;
+      border: transparent;
+      padding: 7px 63px;
+      width: 100%;
+      text-align: center;
+      @include font-style($fs: 30px, $fw: 700);
+      margin-bottom: 34px;
+    }
+
+    &__date {
+      color: #444444;
+      @include font-style($fs: 18px);
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+  }
+}
