@@ -1,0 +1,12 @@
+// Mixins and placeholders
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font-style($fs: 18px, $fw: 400, $lh: 1.166) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
