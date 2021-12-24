@@ -1,0 +1,83 @@
+.features {
+  padding-top: 50px;
+  padding-bottom: 51px;
+  background-image: url(../images/bg-footprints.svg);
+  background-color: #ffffff;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 97px;
+  }
+
+  &__title {
+    text-align: center;
+    background-image: linear-gradient(#f9e994, #537d13, #483c08);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+      @include font-style($fs: 52px, $fw: 700, $lh: 1.173);
+    }
+  }
+
+  &__cards {
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+  }
+
+  &__post {
+    background-color: #f6e791;
+    border-radius: 20px;
+    padding: 0px 15px 14px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+    margin-bottom: 42px;
+
+    @media screen and (min-width: 1024px) {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 305px;
+      margin-bottom: 0;
+    }
+
+    &--second {
+      padding-top: 25px;
+    }
+
+    &--third {
+      padding-top: 14px;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+
+    &--lotus {
+      margin-bottom: 23px;
+    }
+
+    &--treats {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__info {
+    text-align: center;
+    background-color: rgba(161, 211, 55, 0.4);
+    border-radius: 20px;
+    padding: 21px 17px 26px 15px;
+    min-height: 217px;
+  }
+
+  &__subtitle {
+    color: #ffffff;
+    @include font-style($fs: 22px, $fw: 700, $lh: 1.18);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    margin-bottom: 19px;
+  }
+}
